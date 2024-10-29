@@ -1,6 +1,6 @@
 public class LinearSearch{
 
-    public static int LinearSearch(int[] arr,int key)
+    public static int LinearlySearch(int[] arr,int key)
     {
         for(int i=0;i<arr.length;i++)
         {
@@ -15,7 +15,7 @@ public class LinearSearch{
        int[] arr={2,3,5,6,10,7,11}; 
        int key=7;
 
-      int index= LinearSearch(arr,key);
+      int index= LinearlySearch(arr,key);
         if(index==-1)
         {
             System.err.println("Key does not exist");
