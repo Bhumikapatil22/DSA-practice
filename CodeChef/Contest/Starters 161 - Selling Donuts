@@ -1,0 +1,44 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+	Scanner sc=new Scanner(System.in);
+	int t=sc.nextInt();
+    while(t-->0)
+    {
+        int n=sc.nextInt();
+        int m=sc.nextInt();
+        
+        int[] donuts=new int[n];
+        for(int i=0;i<n;i++)
+        {
+             donuts[i]=sc.nextInt();
+        }
+         int[] customers=new int[m];
+        for(int j=0;j<m;j++)
+        {
+            customers[j]=sc.nextInt();
+        }
+        
+        int sad=0;
+        
+        for(int l=0;l<m;l++)
+        {
+            int donutType=customers[l]-1;
+            if(donutType>=0 && donutType<n && donuts[donutType]>0)
+            {
+                donuts[donutType]--;
+            }
+            else{
+                sad++;
+            }
+            
+        }
+        System.out.println(sad);
+    }
+	}
+}
