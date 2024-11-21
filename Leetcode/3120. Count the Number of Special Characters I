@@ -1,0 +1,28 @@
+class Solution {
+    public int numberOfSpecialChars(String word) {
+        Set<Character> lowercaseSet=new HashSet<>();
+        Set<Character> uppercaseSet=new HashSet<>();
+        int count=0;
+
+        for(char c: word.toCharArray())
+        {
+            if(Character.isLowerCase(c))
+            {
+                lowercaseSet.add(c);
+            }
+            else if(Character.isUpperCase(c))
+            {
+                uppercaseSet.add(c);
+            }
+        }
+    
+     for(char ch:lowercaseSet)
+     {
+        if(uppercaseSet.contains(Character.toUpperCase(ch)))
+        {
+            count++;
+        }
+     }
+    return count;
+    }
+}
