@@ -1,0 +1,19 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+	    Scanner sc=new Scanner(System.in);
+	    int x=sc.nextInt();
+	    int y=sc.nextInt();
+        int z=sc.nextInt();
+        
+        int individual=(2*x+3*y);
+        int combo=2*z+y;
+		System.out.println(Math.min(individual,combo));
+
+	}
+}
