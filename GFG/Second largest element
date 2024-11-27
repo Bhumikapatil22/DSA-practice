@@ -1,0 +1,27 @@
+class Solution {
+    public int getSecondLargest(int[] arr) {
+        int max=Integer.MIN_VALUE;
+        int del=Integer.MIN_VALUE;
+        if(arr.length<2)
+        {
+            return -1;
+        }
+        for(int i=0;i<arr.length;i++)
+        {
+            if(arr[i]>max)
+            {
+                del=max;
+                max=arr[i];         
+            }
+            else if(arr[i]>del && arr[i]!=max)
+            {
+                del=arr[i];
+            }
+           
+        }
+        if(del == Integer.MIN_VALUE)
+        return -1;
+       else
+       return del;
+    }
+}
