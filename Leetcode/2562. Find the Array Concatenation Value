@@ -1,0 +1,24 @@
+class Solution {
+    public long findTheArrayConcVal(int[] nums) {
+        int left=0;
+        int right=nums.length-1;
+        long sum=0;
+        while(left<=right)
+        {
+            if(left==right)
+            {
+                sum=sum+nums[left];
+            }
+            else
+            {
+                String one=String.valueOf(nums[left]);
+                String two=String.valueOf(nums[right]);
+                String concate=one+two;
+                sum=sum+Long.parseLong(concate);
+            }
+            left++;
+            right--;
+        }
+        return sum;
+    }
+}
