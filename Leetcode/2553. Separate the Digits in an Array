@@ -1,0 +1,24 @@
+class Solution {
+    public int[] separateDigits(int[] nums) {
+        ArrayList<Integer> array=new ArrayList<>();
+        for(int num:nums)
+        {          
+            remainder(num,array);
+        }
+        
+
+        int[] answer=array.stream().mapToInt(Integer::intValue).toArray();
+        return answer;
+    }
+    private void remainder(int n,ArrayList<Integer> array)
+        {
+          ArrayList<Integer> temp=new ArrayList<>();
+            while(n>0)
+            {
+               int r=n%10;
+                n=n/10;
+                temp.add(0,r);
+            }
+           array.addAll(temp);
+        }
+}
