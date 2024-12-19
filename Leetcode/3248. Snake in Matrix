@@ -1,0 +1,25 @@
+class Solution {
+    public int finalPositionOfSnake(int n, List<String> commands) {
+        int pos=0;
+        for(int i=0;i<commands.size();i++)
+        {
+            if(commands.get(i).equals("DOWN"))
+            {
+                pos+=n;
+            }
+            if(commands.get(i).equals("UP"))
+            {
+                pos-=n;
+            }
+            if(commands.get(i).equals("LEFT"))
+            {
+                pos--;
+            }
+            if(commands.get(i).equals("RIGHT"))
+            {
+                pos++;
+            }
+        }
+        return pos;
+    }
+}
