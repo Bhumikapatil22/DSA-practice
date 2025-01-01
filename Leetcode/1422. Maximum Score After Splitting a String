@@ -1,0 +1,25 @@
+class Solution {
+    public int maxScore(String s) {
+        int zeroC=0;
+        int left=0;
+        int max=0;
+        while( left < s.length()-1)
+        {
+            if((s.charAt(left)-'0')==0)
+            {
+                zeroC++;
+            }
+             int oneC=0;
+            for(int right=left+1;right<s.length();right++)
+            {
+                 if((s.charAt(right)-'0')==1)
+                    {
+                        oneC++;
+                    }
+            }
+            left++;
+            max=Math.max(max, zeroC + oneC);
+        }
+        return max;
+    }
+}
