@@ -1,0 +1,20 @@
+class Solution {
+    public int minimumChairs(String s) {
+        int maxOcc=0;
+        int currOcc=0;
+        for(int i=0;i<s.length();i++)
+        {
+            if(s.charAt(i)=='E')
+            {
+                currOcc++;
+                maxOcc=Math.max(maxOcc,currOcc);
+            }
+            else
+            {
+                currOcc--;
+                
+            }
+        }
+        return maxOcc;
+    }
+}
